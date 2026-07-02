@@ -49,6 +49,7 @@ export class WireView extends WireObject {
       }
 
       if (err instanceof Error) {
+        console.error(err)
         return React.cloneElement(element, { 'data-wire': 'error' } as any, err.message) as React.ReactNode
       }
 
@@ -241,7 +242,7 @@ export class WireView extends WireObject {
 
     createRoot(elem!).render(
       <StrictMode>
-          <app.observer />
+        <app.observer />
       </StrictMode>
     )
   }

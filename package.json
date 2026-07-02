@@ -12,10 +12,10 @@
   },
   "homepage": "https://github.com/PavelZubkov/mol_wire_react#readme",
   "scripts": {
-    "dev": "vite --config vite.config.ts --port 3000",
+    "dev": "vite --config vite.config.ts",
     "build": "tsc -b && vite --config vite.config.ts build",
     "lint": "eslint .",
-    "preview": "vite --config vite.config.ts preview --port 3000"
+    "preview": "vite --config vite.config.ts preview"
   },
   "dependencies": {
     "classnames": "^2.5.1",
