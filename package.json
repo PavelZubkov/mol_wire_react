@@ -1,0 +1,42 @@
+{
+  "name": "mol_wire_react",
+  "description": "$mol_wire + React",
+  "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelZubkov/mol_wire_react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PavelZubkov/mol_wire_react/issues"
+  },
+  "homepage": "https://github.com/PavelZubkov/mol_wire_react#readme",
+  "scripts": {
+    "dev": "vite --config vite.config.ts --port 3000",
+    "build": "tsc -b && vite --config vite.config.ts build",
+    "lint": "eslint .",
+    "preview": "vite --config vite.config.ts preview --port 3000"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "history": "^5.3.0",
+    "mol_time_all": "^1.1.1690",
+    "mol_wire_lib": "^1.0.1757",
+    "path-to-regexp": "^8.4.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/vscode": "^1.120.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "prettier": "^3.8.2",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "vite-tsconfig-paths": "^6.1.1"
+  }
+}

@@ -1,0 +1,81 @@
+@view-transition {
+	navigation: auto;
+}
+
+.WireView {
+	transition-property: height, width, min-height, min-width, max-width, max-height, transform, scale, translate, rotate;
+	transition-duration: .2s;
+	transition-timing-function: ease-out;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	display: flex;
+	flex-shrink: 0;
+	contain: style;
+}	
+
+.WireView > * {
+	word-break: inherit;
+}
+
+[wire_view_root] {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	contain: unset; /** Fixes bg ignoring when applied to body on Chrome */
+	tab-size: 4;
+}
+
+@keyframes wait {
+	from {
+		opacity: .25;
+	}
+	20% {
+		opacity: .75;
+	}
+	to {
+		opacity: .25;
+	}
+}
+
+:where([data-wire="promise"]) {
+	background: rgb(227, 226, 226);
+}
+
+[data-wire="promise"] {
+	animation: wait 1s steps(20,end) infinite;
+
+  width: 100%;
+  /* height: 100%; */
+  
+  min-width: 20px;
+  min-height: 20px;
+  
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+}
+
+[data-wire="error"] {
+	background-image: repeating-linear-gradient(
+		-45deg,
+		rgb(255, 0, 0, 0.5),
+		rgb(255, 0, 0, 0.5) .5rem,
+		rgb(255, 0, 0, 0.4) .5rem,
+		rgb(255, 0, 0, 0.4) 1.5rem
+	);
+	color: black;
+  font-size: 16px;
+  font-weight: 500;
+	align-items: center;
+	justify-content: center;
+
+  width: 100%;
+  /* height: 100%; */
+  
+  min-width: 0;
+  min-height: 0;
+  
+  flex-grow: 1;
+  flex-shrink: 1;
+}

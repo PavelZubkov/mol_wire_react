@@ -1,0 +1,17 @@
+.WireButton [data-wire="promise"], .WireButton [data-wire="error"] {
+  flex-grow: initial; /* Сбросил потому что меняло геометрию кнопки */
+  width: initial;
+}
+
+.WireButton_Popover {
+  position: absolute;
+  position-area: top span-right;
+  position-try-fallbacks: flip-block, flip-inline;
+
+  margin: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.65);
+}
